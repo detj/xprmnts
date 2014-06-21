@@ -1,0 +1,30 @@
+extends layout
+
+block content
+
+  h1 HTML5 Forms
+
+  form(id="html5-form", method="POST", action="/save")
+    label(for="name") Fullname
+      input(type="text", id="name", name="name", placeholder="John Smith", required="true", autofocus="true")
+    label(for="email") Email
+      input(type="email", id="email", name="email", placeholder="john.s@example.com")
+    label(for="phone") Phone
+      input(type="tel", id="phone", name="phone", placeholder="(555) 666 7777")
+    label(for="dob") Date of birth
+      input(type="date", id="dob", name="dob")
+    label(for="website") Website
+      input(type="url", id="website", name="website", placeholder="http://example.com")
+    label(for="meeting") Meeting Start Time
+      input(type="datetime-local", id="meeting", name="meeting")
+    label(for="favno") Favorite Number
+      input(type="number", id="favno", name="favno", placeholder="9")
+    label(for="search") search
+      input(type="search", id="search", name="search", placeholder="Type something", list="search-options")
+      datalist(id="search-options")
+        option(value="apple")
+        option(value="orange")
+        option(value="banana")
+        option(value="grapes")
+        option(value="pineapple")
+        option(value="pomegranate")
